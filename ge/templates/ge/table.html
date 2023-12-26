@@ -1,0 +1,222 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabela | brasileirão série a</title>
+    <script src="js/jquery.js"></script>
+    <link rel="shortcut icon" href="{% static 'ge/imgs/ge-favicon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css"
+    integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css"
+    integrity="sha512-sVSECYdnRMezwuq5uAjKQJEcu2wybeAPjU4VJQ9pCRcCY4pIpIw4YMHIOQ0CypfwHRvdSPbH++dA3O4Hihm/LQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css"
+    integrity="sha512-tk4nGrLxft4l30r9ETuejLU0a3d7LwMzj0eXjzc16JQj+5U1IeVoCuGLObRDc3+eQMUcEQY1RIDPGvuA7SNQ2w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @font-face {
+            font-family: 'Open Sans';
+            src: url('{% static "ge/css/OpenSans-VariableFont_wdth,wght.ttf" %}');
+        }
+    </style>
+    <link rel="stylesheet" href="{% static 'ge/css/styles.css' %}">
+</head>
+<body>
+    <div id="barra-globocom">
+        <a href="https://globo.com" id="globocom">globo.com</a>
+        <a href="https://g1.globo.com/?utm_source=barraGCOM" id="g1">g1</a>
+        <a href="https://ge.globo.com/?utm_source=barraGCOM" id="ge">ge</a>
+        <a href="https://gshow.globo.com/" id="gshow">gshow</a>
+        <a href="https://globoplay.globo.com/" id="globoplay">globoplay</a>
+        <a href="https://cartola.globo.com/" id="cartola">cartola</a>
+        <a href="https://globoplay.globo.com/categorias/esportes/" id="sportv">sportv</a>
+
+        <div class="second">
+            <a href="https://vitrine.globo.com/globocom/index.jsp?origemId=3212&utm_source=barraGCOM" class="assine-já">Assine Já</a>
+            <a href="https://authx.globoid.globo.com/6870/login?url=https%3A%2F%2Fid.globo.com%2Fauth%2Frealms%2Fglobo.com%2Flogin-actions%2Fauthenticate%3Fsession_code%3DcpbQYT8-MOdg9YkuJLXrOZ-wZBCYdRsQdqxaT3TOpzU%26execution%3D8feb8053-1729-44f9-bfa0-783a70e68d14%26client_id%3Dbarra%2540apps.globoid%26tab_id%3DldyLcKuorqY%26request-context%3DBUlw0J&error=&request-context=BUlw0J" class="conta-globo"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 1.9C9.16 1.9 10.1 2.84 10.1 4C10.1 5.16 9.16 6.1 8 6.1C6.84 6.1 5.9 5.16 5.9 4C5.9 2.84 6.84 1.9 8 1.9ZM8 10.9C10.97 10.9 14.1 12.36 14.1 13V14.1H1.9V13C1.9 12.36 5.03 10.9 8 10.9ZM8 0C5.79 0 4 1.79 4 4C4 6.21 5.79 8 8 8C10.21 8 12 6.21 12 4C12 1.79 10.21 0 8 0ZM8 9C5.33 9 0 10.34 0 13V15C0 15.55 0.45 16 1 16H15C15.55 16 16 15.55 16 15V13C16 10.34 10.67 9 8 9Z" fill="#171717"></path>
+            </svg>  Conta Globo</a>
+        </div>
+    </div>
+    <header>
+            <div id="menu">
+                <div id="burger">
+                    <div class="burger-element">
+                    </div>
+                    <div class="burger-element">
+                    </div>
+                    <div class="burger-element">
+                    </div>
+                </div>
+                <div id="menu-text">MENU</div>
+            </div>
+            <img src="{% static 'ge/imgs/ge.png' %}" alt="logo ge" id="logo-header">
+            <a href=".">
+                <h1>BRASILEIRÃO SÉRIE A</h1>
+            </a>
+                <button type="submit" class="search-button"><i class="fas fa-search" style="color: white;"></i></button>
+                <input type="search" name="search-bar" id="search-bar" placeholder="BUSCAR">
+    </header>
+    <nav>
+        <a href="" class="classification">classificação</a>
+        <a href="" class="simulator">simulador</a>
+        <a href="">vídeos</a>
+        <a href="">VAR</a>
+
+    </nav>
+
+    <div class="pub">
+        <div class="pub-box-sportingbet">
+            <div class="ad-headline">OFERTA EM DESTAQUE 🎁</div>
+            <div class="ad-sportingbet">
+                <div class="ad-sportingbet-headline">BÔNUS DE 100% PARA NOVOS CLIENTES.</div>
+                <img src="{% static 'ge/imgs/sportingbet-logo.png' %}" alt="bookie-logo" width="110px" class="ad-sportingbet-img">
+                <a href="https://v1.oddsserve.com/zsRQPyz8On5JfYeLbiFvbQoZBOI5gqwNbilTGAcqkVXlXXR5tTAT5Qbqd7jCQR2PSoJIPJbJUvSy2XyLtHE1r5S6PfdNa7Iq8MMWky-TkrshzinQexUfpnvEc_h4ynHnnSZPYR99d3gki8qLxYGC8Cw25PGzUeQQcwYGc9prQTTfaJrATS04esiXh2bFWUJUBHz23Wcls4to423hBO_lUnySIGXPrDGFsgW3L3bSHBDpRiJQu83M4GoMxDGOp0sf3GjIvePWdDEQ5dvedeI6JhQ4uwb8gutaxycnoUOwOEI6_wu2dQyWK7cbdCPZ2cONX0WyqUhgTROPHp5V_Z8yST7IIIt3AVRXJ-uNOBpL16zMdeV1Sz-Xl8FWbgBieb7k-uW3u1o2ZCT57l4f3aCQLGUciO0A?DC=HZ&u=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%3Fxai%3DAKAOjstXe8dv2oov5UYaoPgiIsdH5YiVsLlnBOZEe_GBNKWi7eYQX4h3zgjXi1HzuLAmdt77QqAlN-kFHp0xfHj-AKUenaC9ccIjLTr__jaqMxVOZFNlzo4taF2lDKrNOwj0OdDfF1LzgWhMFu2_H2ZfDWkGOX_bpTcRaRyIl66JblxOwQ7nRsppEFiPXUd26ProkDc67Lq1yfEZYGh1lRpMUjn6Y6zuXbbGYHCRSQvuKf9mF30PlZ9aPcY6hLAYhloJ7QHNFo4894adx6Tb3rQe_6l9FZzHNBlAZpupkQAZzKxYNleWsbIBprVY-hpRjL-Sno5vtIE5Vc6tG3UpFR0TrfA7uUqzusYycztGH0C-OZz-DsQdP0x3jOnsdoU_v9IkMAvrmIksVaPRRseF%26sai%3DAMfl-YRMSjtKl0Ec8MKSjJxIEftGlRaEDuV9meoVaKcwwJhBuXqWDbCK0PucJOwoA80FGR1vgPRzRCyb1LaU2fM_Z0Ib_-p0l_MYQ_-sHhOylSBgMW7XddAknT4yLktgsaM%26sig%3DCg0ArKJSzGBh4tz2S66AEAE%26fbs_aeid%3D%255Bgw_fbsaeid%255D%26urlfix%3D1%26adurl%3Dhttps%253A%252F%252Fpromo.sportingbet.com%252Fpt-br%252Fpromo%252Fp%252Fsports%252Flatam%252Fbonus-apostas-esportivas-boas-vindas%253Fwm%253D5379089%2526zoneid%253D2102746" class="ad-sportingbet-link">Garanta até R$ 300!</a>
+            </div>
+            <div class="ad-sportingbet-footer">+18. Jogo responsável. Aposte agora! Novos clientes ganham Bônus de 100% </div>
+        </div>
+    </div>
+
+    <div class="table"><h2>TABELA</h1></div>
+    <script src="{% static 'ge/js/jquery.js' %}"></script>
+    <script>
+        $.ajax({
+        url: '{% static "ge/js/clubs.json" %}',
+        method: 'get',
+        success(data) {
+            let lines = data.map((club) => {
+    
+                let place = document.createElement('td')
+                place.innerHTML = club.place
+    
+                let name = document.createElement('td')
+                name.innerHTML = club.name
+    
+                let points = document.createElement('td')
+                points.innerHTML = club.points
+    
+                //let advance_number = document.createElement('td')
+                //advance_number.innerHTML = club.advance_number
+    
+                let played = document.createElement('td')
+                played.innerHTML = club.played
+    
+                let wins = document.createElement('td')
+                wins.innerHTML = club.wins
+    
+                let draws = document.createElement('td')
+                draws.innerHTML = club.draws
+    
+                let loss = document.createElement('td')
+                loss.innerHTML = club.loss
+    
+                let gf = document.createElement('td')
+                gf.innerHTML = club.gf
+    
+                let ga = document.createElement('td')
+                ga.innerHTML = club.ga
+    
+                let gd = document.createElement('td')
+                gd.innerHTML = club.gd
+    
+                let percentage = document.createElement('td')
+                percentage.innerHTML = club.percentage
+                
+                let tr = document.createElement('tr')
+                tr.appendChild(place)
+                tr.appendChild(name)
+                tr.appendChild(points)
+                //tr.appendChild(advance_number)
+                tr.appendChild(played)
+                tr.appendChild(wins)
+                tr.appendChild(draws)
+                tr.appendChild(loss)
+                tr.appendChild(gf)
+                tr.appendChild(ga)
+                tr.appendChild(gd)
+                tr.appendChild(percentage)
+    
+                if (club.place == 1) {
+                    tr.classList.add('first-row')
+                } else {
+                    tr.classList.add('not-first-row')
+                }
+                return tr
+            })
+            let table = document.createElement('table')
+    
+    
+    
+    
+    
+    
+            
+            let tr_for_header = document.createElement('tr')
+            tr_for_header.classList.add('table-header-row')
+    
+            let th_place = document.createElement('th')
+            th_place.innerHTML = 'Classificação'
+    
+            let th_club = document.createElement('th')
+            th_club.innerHTML = ''
+    
+            let th_points = document.createElement('th')
+            th_points.innerHTML = 'P'
+    
+            let th_played = document.createElement('th')
+            th_played.innerHTML = 'J'
+    
+            let th_wins = document.createElement('th')
+            th_wins.innerHTML = 'V'
+    
+            let th_draws = document.createElement('th')
+            th_draws.innerHTML = 'E'
+    
+            let th_loss = document.createElement('th')
+            th_loss.innerHTML = 'D'
+    
+            let th_gf = document.createElement('th')
+            th_gf.innerHTML = 'GP'
+    
+            let th_ga = document.createElement('th')
+            th_ga.innerHTML = 'GC'
+    
+            let th_gd = document.createElement('th')
+            th_gd.innerHTML = 'SG'
+    
+            let th_percentage = document.createElement('th')
+            th_percentage.innerHTML = '%'
+    
+    
+            tr_for_header.appendChild(th_place)
+            tr_for_header.appendChild(th_club)
+            tr_for_header.appendChild(th_points)
+            tr_for_header.appendChild(th_played)
+            tr_for_header.appendChild(th_wins)
+            tr_for_header.appendChild(th_draws)
+            tr_for_header.appendChild(th_loss)
+    
+            tr_for_header.appendChild(th_gf)
+            tr_for_header.appendChild(th_ga)
+            tr_for_header.appendChild(th_gd)
+            tr_for_header.appendChild(th_percentage)
+    
+    
+    
+    
+            lines = [
+                tr_for_header,
+                ...lines
+            ]
+            lines.forEach(line => table.appendChild(line))
+    
+            //document.body.insertAdjacentHTML('beforeend', table)
+            let element = document.querySelector('.table')
+            element.appendChild(table)
+        }
+    })</script>
+</body>
+</html>

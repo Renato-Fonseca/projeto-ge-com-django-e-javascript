@@ -1,0 +1,268 @@
+body {
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background-color: rgb(6, 170, 72);
+    /*padding: 40px 0px;*/
+    /*height: 130px;*/
+    height: 74px;
+}
+
+#barra-globocom {
+    padding: 10.4px;
+    padding-left: 250px;
+}
+
+
+#barra-globocom a {
+    text-decoration: none;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#globocom {
+    color: #0669DE;
+    width: 100vw;
+}
+
+#g1 {
+    color: #C4170C;
+}
+
+#ge {
+    color: #06AA48;
+}
+
+#gshow {
+    color: #FF6700;
+}
+
+#globoplay {
+    color: #FB3255;
+}
+
+#cartola {
+    color: #E3672B;
+}
+
+#sportv {
+    color: #08053A;
+}
+
+.second {
+    display: inline;
+    padding-left: 550px;
+}
+
+.assine-já {
+    color: black;
+}
+
+.conta-globo {
+    color: black;
+}
+
+#menu {
+    width: 500px;
+    display: flex;
+    position: relative;
+    top: 30px;
+    left: 250px;
+}
+
+.burger-element {
+    background-color: white;
+    width: 20px;
+    height: 2px;
+    margin: 4px 0px;
+}
+
+#menu-text {
+    color: white;
+    margin: 0px 7px;
+    text-align: center;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 700;
+    /*position: relative;
+    top: 8px;
+    left: 60px;*/
+}
+
+#logo-header {
+    width: 55px;
+    position: relative;
+    top: -9px;
+    left: 330px;
+}
+
+header a {
+    text-decoration: none;
+    position: relative;
+    top: -65px;
+    left: 1px;
+    margin: auto;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    margin: 0px;
+}
+
+
+
+#search-bar {
+    position: relative;
+    top: -103px;
+    left: 1450px;
+    background-color: #05913D;
+    border: 0px none black;
+    border-radius: 0px 5px 5px 0px;
+
+    width: 150px;
+    height: 33px;
+}
+
+#search-bar::placeholder {
+    color: white;
+    font-weight: 800;
+}
+
+#search-bar:focus-within {
+    background-color: white;
+    border: 0px none black;
+}
+
+#search-bar:focus-within::placeholder {
+    color: #999999;
+}
+
+.search-button {
+    position: relative;
+    top: -103px;
+    left: 1460px;
+    width: 30px;
+    height:33px;
+    border-radius: 5px 0px 0px 5px;
+
+    background-color: #05913D;
+    border: 0px none black;
+}
+
+nav {
+    height: 56px;
+    background-color: rgb(6, 170, 72);
+    border-top: 1px solid #1FB35B;
+    line-height: 53px;
+    padding-left: 235px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #83D5A4;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+nav a.classification {
+    color: white;
+    padding: 15px 0px;
+    border-bottom: 2px solid white;
+}
+
+nav a.simulator {
+    padding-left: 30px;
+}
+
+.pub {
+    width: 1360px;
+    height: 250px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.pub-box-sportingbet {
+    margin-left: 175px;
+}
+
+.ad-headline {
+    font-weight: 700;
+}
+
+.ad-sportingbet {
+    background-color: #00AAE7;
+    width: 310px;
+    height: 173px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.ad-sportingbet-headline {
+    color: white;
+    font-size: 20px;
+    padding-top: 10px;
+    font-weight: 800;
+}
+
+.ad-sportingbet-img {
+    position: relative;
+    top: -25px;
+}
+
+.ad-sportingbet-link {
+    text-decoration: none;
+    background-color: white;
+    color: #272F6D;
+    height: 32px;
+    padding: 3px;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 35px;
+    line-height: 32px;
+    position: relative;
+    top: -75px;
+}
+
+.ad-sportingbet-footer {
+    /*color: #CACACA;*/
+    color: rgba(0, 0, 0, 0.301);
+    font-size: 10px;
+    padding: 10px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #CACACA;
+}
+
+.table {
+    margin: auto;
+    width: fit-content;
+    border-collapse: collapse;
+}
+
+.table tr td{
+    padding: 10px;
+}
+
+/*.table tr{
+    box-shadow: 0px -1px 2px 0px #b3b3b3;
+}*/
+
+.table-header-row {
+    color: #999;
+    box-shadow: 0px -1px 0px 0px #c0c0c0e1;
+}
+
+.first-row {
+    box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.295);
+}
+
+.not-first-row {
+    box-shadow: 0px -1px 0px 0px #d8d8d8c7;
+}
