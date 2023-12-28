@@ -87,19 +87,27 @@
             url: '{% static "ge/js/clubs.json" %}',
             method: 'get',
             success(data) {
+                let ln = 4
+                let pln = 6
+                let sn = 12
                 let lines = data.map((club) => {
         
                     let place = document.createElement('td')
+                    place.setAttribute('style', 'padding: 0px;')
                     place.innerHTML = club.place
+                    place.classList.add('place')
         
                     let name = document.createElement('td')
+                    name.setAttribute('style', 'padding: 0px;')
                     name.innerHTML = club.name
+                    name.classList.add('name')
         
+                    /*let place_name = document.createElement('td')
+                    place_name.innerHTML = `${club.place} ${club.name}`
+                    place_name.setAttribute('colspan', 2)*/
+
                     let points = document.createElement('td')
                     points.innerHTML = club.points
-        
-                    //let advance_number = document.createElement('td')
-                    //advance_number.innerHTML = club.advance_number
         
                     let played = document.createElement('td')
                     played.innerHTML = club.played
@@ -124,13 +132,26 @@
         
                     let percentage = document.createElement('td')
                     percentage.innerHTML = club.percentage
-                    
-                    if (club.place <= 4) {
+
+                    if (club.hasOwnProperty('libertadores')) {
                         place.classList.add('libertadores')
-                    } else if (club.place <= 6) {
+
+                        if (club.place <= ln) {
+                            ln++
+                            pln++
+                            sn++
+                        } else if (club.place <= pln) {
+                            pln++
+                            sn++
+                        } else if (club.place <= sn) {
+                            sn++
+                        }
+                    } else if (club.place <= ln) {
+                        place.classList.add('libertadores')
+                    } else if (club.place <= pln) {
                         place.classList.add('pre-libertadores')
                     }
-                    else if (club.place <= 12) {
+                    else if (club.place <= sn) {
                         place.classList.add('sulamericana')
                     } else if (club.place <= 16) {
                         place.classList.add('remain')
@@ -141,6 +162,7 @@
                     let tr = document.createElement('tr')
                     tr.appendChild(place)
                     tr.appendChild(name)
+                    //tr.appendChild(place_name)
                     tr.appendChild(points)
                     //tr.appendChild(advance_number)
                     tr.appendChild(played)
@@ -172,9 +194,8 @@
         
                 let th_place = document.createElement('th')
                 th_place.innerHTML = 'Classificação'
-        
-                let th_club = document.createElement('th')
-                th_club.innerHTML = ''
+                th_place.setAttribute('colspan', 2)
+                th_place.classList.add('classificacao')
         
                 let th_points = document.createElement('th')
                 th_points.innerHTML = 'P'
@@ -205,7 +226,6 @@
         
         
                 tr_for_header.appendChild(th_place)
-                tr_for_header.appendChild(th_club)
                 tr_for_header.appendChild(th_points)
                 tr_for_header.appendChild(th_played)
                 tr_for_header.appendChild(th_wins)
