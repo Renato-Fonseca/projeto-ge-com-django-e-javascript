@@ -71,8 +71,6 @@
     <div class="pub">
         <div class="pub-box-sportingbet">
             <div class="ad-headline">OFERTA EM DESTAQUE 🎁</div>
-            <img src="{% static 'ge/imgs/flexinha-verde.png' %}" alt="flexa verde" width="8px">
-            <img src="{% static 'ge/imgs/flexinha-vermelha.png' %}" alt="flexa verde" width="8px">
             <div class="ad-sportingbet">
                 <div class="ad-sportingbet-headline">BÔNUS DE 100% PARA NOVOS CLIENTES.</div>
                 <img src="{% static 'ge/imgs/sportingbet-logo.png' %}" alt="bookie-logo" width="110px" class="ad-sportingbet-img">
@@ -103,10 +101,14 @@
                     name.setAttribute('style', 'padding: 0px;')
                     name.innerHTML = club.name
                     name.classList.add('name')
-        
-                    /*let place_name = document.createElement('td')
-                    place_name.innerHTML = `${club.place} ${club.name}`
-                    place_name.setAttribute('colspan', 2)*/
+                    
+                    let advance_number = document.createElement('td')
+                    if (club.advance_number == 0) {
+                        advance_number.innerHTML = `0 <div class="advance-number-neutral"></div>`
+                    } else {
+                    advance_number.innerHTML = club.advance_number
+                    }
+                    advance_number.classList.add('advance_number')
 
                     let points = document.createElement('td')
                     points.innerHTML = club.points
@@ -164,6 +166,7 @@
                     let tr = document.createElement('tr')
                     tr.appendChild(place)
                     tr.appendChild(name)
+                    tr.appendChild(advance_number)
                     //tr.appendChild(place_name)
                     tr.appendChild(points)
                     //tr.appendChild(advance_number)
@@ -196,7 +199,7 @@
         
                 let th_place = document.createElement('th')
                 th_place.innerHTML = 'Classificação'
-                th_place.setAttribute('colspan', 2)
+                th_place.setAttribute('colspan', 3)
                 th_place.classList.add('classificacao')
         
                 let th_points = document.createElement('th')

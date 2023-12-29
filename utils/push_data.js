@@ -66,10 +66,10 @@ let pna = createPna(
     2,
     3,	
     "Atlético-MG",
-    1,
+    -1,
     4,	
     "Flamengo",
-    1,
+    -1,
     5,	
     "Botafogo",
     0,
@@ -108,7 +108,7 @@ let pna = createPna(
     1,
     17,	
     "Santos",
-    2,
+    -2,
     18,	
     "Goiás",
     0,
@@ -147,5 +147,5 @@ pna.forEach((obj) => {
     AppendClub(...Object.values(obj), ...others[index]) 
 })
 
-let url = __dirname.replace('\\utils', '')+'/test.json'
+let url = __dirname.replace('\\utils', '')+'/ge/static/ge/js/clubs.json'
 fs.writeFile(url, JSON.stringify(clubs), (err) => console.log(err || 'Arquivo salvo com sucesso!')) 
