@@ -93,7 +93,7 @@
                 let lines = data.map((club) => {
         
                     let place = document.createElement('td')
-                    place.setAttribute('style', 'padding: 0px;')
+                    place.setAttribute('style', 'padding: 0px; padding-right: 3px;')
                     place.innerHTML = club.place
                     place.classList.add('place')
         
@@ -139,6 +139,9 @@
                     let percentage = document.createElement('td')
                     percentage.innerHTML = club.percentage
 
+                    let last_games = document.createElement('td')
+
+
                     if (club.hasOwnProperty('libertadores')) {
                         place.classList.add('libertadores')
 
@@ -180,7 +183,8 @@
                     tr.appendChild(ga)
                     tr.appendChild(gd)
                     tr.appendChild(percentage)
-        
+                    tr.appendChild(last_games)
+
                     if (club.place == 1) {
                         tr.classList.add('first-row')
                     } else {
@@ -231,6 +235,8 @@
                 let th_percentage = document.createElement('th')
                 th_percentage.innerHTML = '%'
         
+                let th_last_games = document.createElement('th')
+                th_last_games.innerHTML = 'Últimos Jogos'
         
                 tr_for_header.appendChild(th_place)
                 tr_for_header.appendChild(th_points)
@@ -243,7 +249,7 @@
                 tr_for_header.appendChild(th_ga)
                 tr_for_header.appendChild(th_gd)
                 tr_for_header.appendChild(th_percentage)
-        
+                tr_for_header.appendChild(th_last_games)
         
         
         
@@ -259,5 +265,7 @@
             }
         })
         </script>
+
+        
 </body>
 </html>
