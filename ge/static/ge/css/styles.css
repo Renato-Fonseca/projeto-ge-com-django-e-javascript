@@ -307,7 +307,19 @@ td.zr {
     color: red;
 }
 
-.advance-number-neutral {
+td.advance-number {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+}
+
+.advance-number-number {
+    margin-right: 6px;
+    color: #bebebe;
+    font-size: 12.5px;
+}
+
+.advance-number-neutral-div {
     width: 7px;
     height: 7px;
     background-color: #CCCCCC;

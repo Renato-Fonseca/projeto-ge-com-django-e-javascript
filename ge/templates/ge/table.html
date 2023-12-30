@@ -104,11 +104,13 @@
                     
                     let advance_number = document.createElement('td')
                     if (club.advance_number == 0) {
-                        advance_number.innerHTML = `0 <div class="advance-number-neutral"></div>`
+                        advance_number.innerHTML = `<div class="advance-number-number">0</div> <div class="advance-number-neutral-div"></div>`
+                    } else if(club.advance_number > 0) {
+                    advance_number.innerHTML = `<div class="advance-number-number">${Math.abs(club.advance_number)}</div> <img src="{% static 'ge/imgs/flexinha-verde.png' %}" alt="" class="advance-number-div">`
                     } else {
-                    advance_number.innerHTML = club.advance_number
+                        advance_number.innerHTML = `<div class="advance-number-number">${Math.abs(club.advance_number)}</div> <img src="{% static 'ge/imgs/flexinha-vermelha.png' %}" alt="" class="advance-number-div">`
                     }
-                    advance_number.classList.add('advance_number')
+                    advance_number.classList.add('advance-number')
 
                     let points = document.createElement('td')
                     points.innerHTML = club.points
