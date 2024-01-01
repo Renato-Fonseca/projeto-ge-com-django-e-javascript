@@ -262,20 +262,6 @@ th.classificacao {
     width: 250px;
 }
 
-.table tr td{
-    padding: 15px;
-    font-size: 15px;
-}
-
-td.place {
-    padding: 0px;
-}
-
-td.name {
-    padding: 0px;
-    width: 230px;
-}
-
 /*.table tr{
     box-shadow: 0px -1px 2px 0px #b3b3b3;
 }*/
@@ -286,6 +272,15 @@ td.name {
 
 .not-first-row {
     box-shadow: 0px -1px 0px 0px #d8d8d8c7;
+}
+
+.table tr td{
+    padding: 15px;
+    font-size: 15px;
+}
+
+td.place {
+    padding: 0px;
 }
 
 td.libertadores {
@@ -307,6 +302,11 @@ td.remain {
 td.zr {
     /*color: #FF0000;*/
     color: red;
+}
+
+td.name {
+    padding: 0px;
+    width: 175px;
 }
 
 td.advance-number {
