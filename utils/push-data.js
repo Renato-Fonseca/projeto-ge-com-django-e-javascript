@@ -2,15 +2,38 @@ let fs = require('fs')
 
 let clubs = []
 
-function AppendClub(place, name, advance_number, points, played, wins, draws, loss, gf, ga, gd, percentage /*last_games*/) {
+function AppendClub(place, name, advance_number, points, played, wins, draws, loss, gf, ga, gd, percentage, last_games) {
     clubs.push({
-        place, name, advance_number, points, played, wins, draws, loss, gf, ga, gd, percentage//, last_games
+        place, name, advance_number, points, played, wins, draws, loss, gf, ga, gd, percentage, last_games
     })
 }
 
-function createOthers(...values) {
 
+
+//AQUI
+let last_games = [ ['v', 'e', 'v', 'v', 'e'], ['d', 'd', 'v', 'v', 'v'],
+['v', 'v', 'v', 'v', 'd'],
+['e', 'v', 'd', 'v', 'd'],
+['e', 'e', 'e', 'e', 'd'], ['e', 'd', 'd', 'v', 'd'],
+['e', 'v', 'v', 'd', 'd'],
+['e', 'e', 'e', 'v', 'd'], ['d', 'v', 'v', 'v', 'v'],
+['d', 'e', 'v', 'v', 'v'],
+ ['e', 'e', 'v', 'd', 'v'],
+ ['v', 'e', 'd', 'd', 'v'],
+ ['v', 'd', 'v', 'd', 'v'],
+ ['d', 'v', 'e', 'e', 'e'],
+ ['v', 'e', 'd', 'd', 'v'],
+ ['e', 'v', 'd', 'd', 'v'],
+ ['e', 'e', 'd', 'd', 'd'],
+ ['d', 'd', 'd', 'd', 'v'],
+ ['v', 'd', 'e', 'd', 'd'],
+['d', 'd', 'd', 'v', 'd']]
+
+
+
+function createOthers(...values) {
     let a = []
+    var i_last_games = 0
     for (let c=0;c <= 9*19; c+=9) {
         var start_range = c
         var stop_range = c+8
@@ -20,10 +43,12 @@ function createOthers(...values) {
             }
             club.push(values[i])
             if (i+1 > stop_range) {
+                club.push(last_games[i_last_games])
+                console.log(club)
                 a.push(club)
             }
         }
-        //values[start_range:stop_range] preciso fazer algo com essa funcionalidade em forma de JavaScript
+        i_last_games++
     }
     return a
 }
@@ -56,7 +81,7 @@ function createPna(...values) {
 }
 let index = 0
 
-
+//AQUI
 let pna = createPna(
     1,	
     "Palmeiras",
@@ -119,7 +144,8 @@ let pna = createPna(
     "América-MG",
     0)
 
-let others = createOthers(70, 38, 20,	10,	8,	64,	33,	31,	61,	
+//AQUI    
+let others = createOthers(70, 38, 20, 10, 8, 64,	33,	31,	61,	
     68,	38,	21,	5,	12,	63,	56,	7,	59,	
     66,	38,	19,	9,	10,	52,	32,	20,	57,	
     66,	38,	19,	9,	10,	56,	42,	14,	57,	
@@ -149,3 +175,5 @@ pna.forEach((obj) => {
 
 let url = __dirname.replace('\\utils', '')+'/ge/static/ge/js/clubs.json'
 fs.writeFile(url, JSON.stringify(clubs), (err) => console.log(err || 'Arquivo salvo com sucesso!')) 
+
+/*PARA UTILIZAR ESTE ARQUIVO, MUDE: last_games, pna, e others*/ 

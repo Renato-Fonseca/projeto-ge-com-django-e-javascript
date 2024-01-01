@@ -113,34 +113,55 @@
                     advance_number.classList.add('advance-number')
 
                     let points = document.createElement('td')
-                    points.innerHTML = club.points
-        
+                    points.innerHTML = `<strong>${club.points}</strong>`
+                    points.classList.add('points')
+
                     let played = document.createElement('td')
                     played.innerHTML = club.played
-        
+                    played.classList.add('played')
+
+
                     let wins = document.createElement('td')
                     wins.innerHTML = club.wins
-        
+                    wins.classList.add('wins')
+
                     let draws = document.createElement('td')
                     draws.innerHTML = club.draws
-        
+                    draws.classList.add('draws')
+
                     let loss = document.createElement('td')
                     loss.innerHTML = club.loss
-        
+                    loss.classList.add('loss')
+
                     let gf = document.createElement('td')
                     gf.innerHTML = club.gf
-        
+                    gf.classList.add('gf')
+
                     let ga = document.createElement('td')
                     ga.innerHTML = club.ga
-        
+                    ga.classList.add('ga')
+
                     let gd = document.createElement('td')
                     gd.innerHTML = club.gd
-        
+                    gd.classList.add('gd')
+
                     let percentage = document.createElement('td')
                     percentage.innerHTML = club.percentage
+                    percentage.classList.add('percentage')
 
                     let last_games = document.createElement('td')
-
+                    let last_games_elements = []
+                    last_games.classList.add('last-games')
+                    club.last_games.forEach((game) => {
+                        if (game == 'v') {
+                            last_games_elements.push('<div class="last-games-win"></div>')
+                        } else if (game == 'e') {
+                            last_games_elements.push('<div class="last-games-draw"></div>')
+                        } else if (game == 'd') { 
+                            last_games_elements.push('<div class="last-games-loss"></div>')
+                        }
+                    })
+                    last_games_elements.forEach(element => {last_games.innerHTML += element})
 
                     if (club.hasOwnProperty('libertadores')) {
                         place.classList.add('libertadores')
@@ -236,7 +257,7 @@
                 th_percentage.innerHTML = '%'
         
                 let th_last_games = document.createElement('th')
-                th_last_games.innerHTML = 'Últimos Jogos'
+                th_last_games.innerHTML = 'ÚLT. JOGOS'
         
                 tr_for_header.appendChild(th_place)
                 tr_for_header.appendChild(th_points)

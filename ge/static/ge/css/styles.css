@@ -248,11 +248,12 @@ nav a.simulator {
 
 .table-header-row {
     color: #999;
-    box-shadow: 0px -1px 0px 0px #c0c0c0e1;
+    box-shadow: 0px -1px 0px 0px #c0c0c08f;
 }
 
 .table-header-row th {
-    padding: 9px;
+    padding: 11px;
+    font-size: 11px;
 }
 
 th.classificacao {
@@ -263,6 +264,7 @@ th.classificacao {
 
 .table tr td{
     padding: 15px;
+    font-size: 15px;
 }
 
 td.place {
@@ -323,4 +325,34 @@ td.advance-number {
     width: 7px;
     height: 7px;
     background-color: #CCCCCC;
+}
+
+.last-games {
+    display: flex;
+    flex-wrap: row;
+    justify-content: center;
+}
+
+.last-games-win {
+    background-color: #51A81E;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+.last-games-draw {
+    background-color: #CCCCCC;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+.last-games-loss {
+    background-color: #FF0000;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin: 2px;
 }
