@@ -5,7 +5,3 @@ from django.shortcuts import render
 
 def table(request): 
     return render(request, 'ge/table.html')
-
-
-def teste(request):
-    return 'devo excluir esta view function'
